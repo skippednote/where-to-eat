@@ -13,7 +13,8 @@
     "card-vibes": "^0.0.3",
     "next": "^6.0.3",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-ga": "^2.5.3"
   },
   "devDependencies": {
     "sharp": "^0.20.4",
