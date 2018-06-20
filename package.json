@@ -1,0 +1,22 @@
+{
+  "name": "wte",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "restaurants": "node utils/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "card-vibes": "^0.0.3",
+    "next": "^6.0.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "sharp": "^0.20.4",
+    "x-ray": "git+https://github.com/matthewmueller/x-ray.git"
+  }
+}
