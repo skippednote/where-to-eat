@@ -5,18 +5,17 @@ import restaurants from '../static/restaurants.json';
 import Restaurant from '../components/restaurant';
 
 export default class extends React.Component {
-  static async getInitialProps({ req }) {
-    return { res: JSON.stringify(restaurants) };
+  static async getInitialProps() {
+    return { restaurants: JSON.stringify(restaurants) };
   }
 
   componentDidMount() {
     ReactGA.initialize('UA-81121528-2');
-    ReactGA.set({ page: window.location.pathname });
     ReactGA.pageview(window.location.pathname);
   }
 
   render() {
-    const restaurants = JSON.parse(this.props.res);
+    const restaurants = JSON.parse(this.props.restaurants);
     return (
       <div className="grid">
         <Head>
