@@ -1,7 +1,8 @@
 {
-  "name": "wte",
+  "name": "wheretoeat",
   "version": "1.0.0",
   "license": "MIT",
+  "alias": "wheretoeat.now.sh",
   "scripts": {
     "dev": "next",
     "build": "next build",
