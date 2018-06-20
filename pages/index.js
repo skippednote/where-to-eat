@@ -10,13 +10,9 @@ export default class extends React.Component {
   }
 
   componentDidMount() {
-    if (!window.GA_INITIATED) {
-      ReactGA.initialize('UA-81121528-2', {
-        titleCase: false,
-      });
-      ReactGA.set({ page: window.location.pathname });
-      ReactGA.pageview(window.location.pathname);
-    }
+    ReactGA.initialize('UA-81121528-2');
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
   }
 
   render() {
