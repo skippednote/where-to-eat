@@ -42,6 +42,9 @@ export default class extends React.Component {
               background: #f1f5f8;
               font-family: 'Rubik', sans-serif;
             }
+            .noscroll {
+              overflow: hidden;
+            }
           `}
         </style>
       </div>

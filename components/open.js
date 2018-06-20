@@ -10,9 +10,13 @@ export class Open extends React.Component {
   };
   componentDidMount() {
     window.addEventListener('keydown', this.escape);
+    window.document.body.classList.toggle('noscroll');
   }
 
-  componentWillUnmount() {}
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.escape);
+    window.document.body.classList.toggle('noscroll');
+  }
 
   render() {
     const { restaurant_name, closeModal, menu } = this.props;
