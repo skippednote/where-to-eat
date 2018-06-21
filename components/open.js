@@ -19,7 +19,14 @@ export class Open extends React.Component {
   }
 
   render() {
-    const { restaurant_name, closeModal, menu } = this.props;
+    const {
+      restaurant_name,
+      closeModal,
+      menu,
+      merchant_address,
+      latitude,
+      lontitude,
+    } = this.props;
     return (
       <Fragment>
         <div className="open">
@@ -28,7 +35,13 @@ export class Open extends React.Component {
               {restaurant_name} | {'🍕 🥪 🥙 Where To Eat 🌭 🍔 🍟'}
             </title>
           </Head>
-          <Menu name={restaurant_name} menu={menu} />
+          <Menu
+            name={restaurant_name}
+            address={merchant_address}
+            menu={menu}
+            latitude={latitude}
+            lontitude={lontitude}
+          />
           <button onClick={closeModal} className="close">
             ❌
           </button>

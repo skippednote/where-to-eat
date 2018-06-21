@@ -1,9 +1,18 @@
 import React, { Fragment } from 'react';
 
-const Menu = ({ name, menu }) => (
+const Menu = ({ name, menu, address, latitude, lontitude }) => (
   <Fragment>
     <div className="menu">
-      <h1 className="title">{name}</h1>
+      <div className="title-container">
+        <h1 className="title">{name}</h1>
+        <a
+          href={`https://www.google.com/maps/?q=@${latitude},${lontitude}`}
+          target="_blank"
+          className="link"
+        >
+          🗺️ {address}
+        </a>
+      </div>
       <div>
         {menu.map(
           menu =>
@@ -33,9 +42,13 @@ const Menu = ({ name, menu }) => (
           margin: auto;
           padding: 1rem;
         }
-        .title {
+        .title-container {
           text-align: center;
           padding-bottom: 2rem;
+        }
+        .link {
+          color: #39f;
+          text-decoration: none;
         }
         .menu-item {
           margin-bottom: 2.5rem;
